@@ -1,0 +1,9 @@
+GAME
+
+Cowboy VS Zombies is a 2d platform game created with Tiled Map Editor and Phaser 3. The object of the game is to collect as many coins as possible and avoid dying :)! 3 worlds are available.
+
+INSTALLATION
+
+At the root of the 'HTML5_Gaming' folder, run the following commands:
+    - 'npm install'
+    - 'node app.js'
