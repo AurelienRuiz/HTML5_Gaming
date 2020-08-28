@@ -26,6 +26,7 @@ class GameOver extends Phaser.Scene {
 
     gameRestart() {
         this.scene.stop()
+        game.coinScore = 0;
         this.scene.start(game.currentGame);
     }
 }

@@ -12,6 +12,8 @@ const config = {
     },
     scene: [
         Menu,
+        Setting,
+        Ranking,
         GameOver,
         Level1,
         Level2,
