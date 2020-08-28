@@ -111,6 +111,7 @@ class Level1 extends Phaser.Scene {
             return false;
         }
 
+        // NEXT LEVEL
         function nextLevel() {
             music_ambiance.stop();
             this.scene.stop();

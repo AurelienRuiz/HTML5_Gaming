@@ -64,6 +64,7 @@ class Level3 extends Phaser.Scene {
         this.player = this.physics.add.sprite(50, 700, 'player_level3');
         this.player.setBounce(0.1);
         this.physics.add.collider(this.player, platforms);
+        this.physics.add.collider(this.player, doors, nextLevel, null, this);
         this.physics.add.collider(this.player, water, gameOver, null, this);
         this.physics.add.overlap(this.player, coins, collectCoin, null, this);
 
@@ -116,6 +117,13 @@ class Level3 extends Phaser.Scene {
             game.coinScore++;
             text.setText(`Score: ${game.coinScore}x`);
             return false;
+        }
+
+        // NEXT LEVEL
+        function nextLevel() {
+            music_ambiance.stop();
+            this.scene.stop();
+            this.scene.start('Final');
         }
 
         // GAME OVER 
