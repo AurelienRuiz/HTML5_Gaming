@@ -7,6 +7,7 @@ class Menu extends Phaser.Scene {
     }
 
     preload() {
+        this.load.audio('ambiance_menu', 'assets/audio/ambiance_menu.mp3');
         this.load.image('menu_background', 'assets/images/background/menu_background.png');
         this.load.image('play_button', 'assets/images/menu/play.png');
         this.load.image('ranking_button', 'assets/images/menu/ranking.png');
@@ -16,12 +17,13 @@ class Menu extends Phaser.Scene {
     create() {
         game.currentGame = 'Menu';
         game.coinScore = 0;
+
         this.add.image(0, 0, 'menu_background').setOrigin(0, 0);
 
         // CREATE BUTTON
         const playButton = this.add.image(550, 550, 'play_button').setOrigin(0, 0);
         const rankingButton = this.add.image(730, 545, 'ranking_button').setOrigin(0, 0);
-        const settingButton = this.add.image(930, 550, 'setting_button').setOrigin(0,0);
+        const settingButton = this.add.image(930, 550, 'setting_button').setOrigin(0, 0);
 
         // INTERACTIVE BUTTON
         playButton.setInteractive({
